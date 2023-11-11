@@ -1,8 +1,39 @@
 body {
   margin: 0;
+  padding: 0;
 }
 
 .container {
-  width: 100vw;
-  height: 100vh;
+  /*
+    viewport는 현재 보이는 웹페이지의 영역
+    vw는 viewport 너비의 1/100을 나타냄 
+    vh는 viewport 높이의 1/100을 나타냄 
+  */
+  width: 100vw;  /*요소의 너비를 viewport 너비와 동일하게 설정*/
+  height: 100vh; /*요소의 높이를 viewport 높이와 동일하게 설정*/
+  text-align: center;
+}
+
+header, footer {
+  height: 11vh;
+  /* line-height : 줄간 맞추는 css 속성으로, height값과 동일할 경우 중앙정렬됨*/
+  line-height: 11vh; 
+  background-color: #5ed7ff;
+}
+
+main, aside {
+  display: inline-block;
+  vertical-align: top;  /*수직 정렬*/
+  height: 79vh;
+  /* line-height : 줄간 맞추는 css 속성으로, height값과 동일할 경우 중앙정렬됨*/
+  line-height: 79vh;   
+}
+
+aside {
+  background-color: #dff3fd;
+  width: 10vw;
+}
+
+main {
+  width: 79vw;
 }
