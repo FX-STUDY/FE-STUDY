@@ -5,10 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>grid layout</title>
     <link rel="stylesheet" href="../css/grid.css" />
+    <style>
+      .grid{
+        display : grid;
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows:repeat(4,162px);
+        width: 100%;
+        height: 100%;
+      }
+      .Top_width{
+        grid-column: 1/7;
+        background-color: #5ed7ff;
+      }
+      .Bottom_width{
+        grid-column: 1/7;
+        background-color: #5ed7ff;
+      }
+      .left_height{
+        grid-row:2/4;
+        background-color:#dff3df;
+      }
+      .right_height{
+        grid-column: 6;
+        grid-row:2/4;
+        background-color:#dff3df;
+      }
+      .center{
+        grid-column: 2/6;
+        grid-row:2/4;
+      }
+      .text{
+        display : flex;
+        justify-content : center;
+        align-items : center;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
-      <!-- 해당 주석을 지우고 여기에 과제를 진행해 주세요! -->
+      <div class="grid">
+        <span class="Top_width text">header</span> 
+        <span class="center text">mid</span>
+        <span class="Bottom_width text">footer</span>
+        <span class="left_height text">left</span>
+        <span class="right_height text">right</span>
+      </div>
+
     </div>
   </body>
 </html>
