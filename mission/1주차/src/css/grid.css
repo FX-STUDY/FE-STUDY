@@ -3,6 +3,34 @@ body {
 }
 
 .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15vh 70vh 15vh;
+
   width: 100vw;
   height: 100vh;
+
+  text-align: center;
+}
+
+.header,
+.footer {
+  line-height: 15vh;
+  background-color: #5ed7ff;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+
+  line-height: 70vh;
+}
+
+.left-side,
+.right-side {
+  background-color: rgb(223, 246, 255);
+}
+
+.main {
+  background-color: #ffffff;
 }
