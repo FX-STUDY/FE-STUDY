@@ -6,9 +6,48 @@
     <title>flex layout</title>
     <link rel="stylesheet" href="../css/flex.css" />
   </head>
+  <style>
+    .main_Side{
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: space-between;
+    }
+    .main_Top{
+      display: flex;
+      width: 100%;
+      height: 10%;
+      flex-direction: column;
+    }
+    .Side{
+      width: 10%;
+      height: 100%;
+      background-color:#dff3df;
+    }
+    .Top{
+      width: 100%;
+      height: 100%;
+      background-color: #5ed7ff;
+    }
+    .text{
+      display : flex;
+      justify-content : center;
+      align-items : center;
+    }
+  </style>
   <body>
     <div class="container">
-      <!-- 해당 주석을 지우고 여기에 과제를 진행해 주세요! -->
+      <div class="main_Top">
+        <div class="Top text">header</div>
+      </div>
+      <div class="main_Side">
+        <div class="Side text">left</div>
+        <div class="text">mid</div>
+        <div class="Side text">right</div>
+      </div>
+      <div class="main_Top">
+        <div class="Top text">footer</div>
+      </div>
     </div>
   </body>
 </html>
