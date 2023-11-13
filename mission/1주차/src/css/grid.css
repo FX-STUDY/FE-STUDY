@@ -1,8 +1,33 @@
 body {
-  margin: 0;
+  margin: 0; 
 }
 
 .container {
-  width: 100vw;
+  display: grid; 
+  grid-template-rows: 100px auto 100px; /* 헤더, 아티클, 푸터의 높이 설정 */
   height: 100vh;
+  width: 100vw;
+}
+
+.header, .footer {
+  display: grid;
+  background-color: #5ed7ff;
+  place-items:center;
+}
+
+.article{
+  display:grid;
+  grid-template-columns: 1fr 3fr 1fr; /*수평-왼쪽 aside부터 비율 설정 */
+}
+
+.aside {
+  display: grid;
+  background-color: #dff3fd;
+  place-items:center;
+}
+
+.main {
+  display: grid;
+  background-color: #FFFFFF;
+  place-items:center;
 }
