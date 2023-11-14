@@ -3,6 +3,37 @@ body {
 }
 
 .container {
+  display:flex;
+  flex-direction:column; /*수직배치*/
   width: 100vw;
   height: 100vh;
+}
+
+.header,.footer{
+  display:flex;
+  background-color:#5ed7ff; 
+  height:100px;
+  /*텍스트 정중앙 배치*/
+  align-items:center;
+  justify-content:center;
+}
+.article {
+  display: flex;
+  flex-grow: 1;  /*공간차지 기본값=0*/
+}
+.aside{
+  display:flex;
+  flex:1;
+  background-color:#dff3fd;
+  width:100px;
+  align-items:center;
+  justify-content:center;
+}
+.main{
+  display:flex; 
+  flex:3;
+  background-color:#FFFFFF;
+  margin: 0 10px;
+  align-items:center;
+  justify-content:center;
 }
