@@ -5,4 +5,31 @@ body {
 .container {
   width: 100vw;
   height: 100vh;
+  text-align:center;
+  line-height: 100px;
+}
+.header,.footer{
+  display:inline-block;
+  width: 100%;
+  height: 100px;
+  background-color: #5ed7ff;
+}
+.article{
+  display:inline-block;
+  width: 100%;
+  height: calc(100vh - 200px);
+  text-align:center;
+  vertical-align: middle;
+}
+.aside{
+  display:inline-block;
+  width: calc(25% - 5px);
+  height: 100%;
+  background-color: #dff3fd;
+}
+.main{
+  display:inline-block;
+  width: calc(50% + 1px);
+  height: 100%;
+  background-color: #FFFFFF;
 }
