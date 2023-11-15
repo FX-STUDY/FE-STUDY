@@ -2,39 +2,46 @@ body {
   margin: 0;
 }
 
+/*
+flex 방향을 가로로 설정 시, 다 가로로 붙어버리는 형상이 발생하여, column으로 변경 
+*/
 .container {
-  /*
-    viewport는 현재 보이는 웹페이지의 영역
-    vw는 viewport 너비의 1/100을 나타냄 
-    vh는 viewport 높이의 1/100을 나타냄 
-  */
   width: 100vw;  /*요소의 너비를 viewport 너비와 동일하게 설정*/
   height: 100vh; /*요소의 높이를 viewport 높이와 동일하게 설정*/
+  
   display: flex;
-  flex-direction: row;  /*아이템들이 행(가로) 방향으로 배치됨.*/
-  flex-wrap: wrap;      /*아이템이 삐져나갈 경우 줄바꿈 실행*/
-  text-align: center;
+  flex-direction: column;  /*아이템들이 행(세로) 방향으로 배치됨.*/
 }
 
-header, footer {
-  width: 100vw;
-  height: 11vh;
-  /* line-height : 줄간 맞추는 css 속성으로, height값과 동일할 경우 중앙정렬됨*/
-  line-height: 11vh; 
+.header, .footer {
+  display: flex;
+  width: 100%;
+  height: 10%;
+  align-items: center;;   /*아이템들을 가운데로 정렬*/
+  justify-content: center;   /*아이템들을 가운데로 정렬*/
   background-color: #5ed7ff;
 }
 
-main, aside {
-  height: 80vh; 
-  /* line-height : 줄간 맞추는 css 속성으로, height값과 동일할 경우 중앙정렬됨*/
-  line-height: 80vh; 
+/*main과 aside 공통 속성*/
+.content {
+  display: flex;   /*display : block이 default값 -> flex로 변경*/
+  width: 100%;
+  height: 80%; 
 }
 
-aside {
+.aside-a, .aside-b {
+  display: flex;
   background-color: #dff3fd;
-  width: 10vw;
+  width: 10%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
-main {
-  width: 80vw;
+.main {
+  display: flex;
+  width: 80%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
