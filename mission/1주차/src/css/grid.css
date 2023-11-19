@@ -5,4 +5,47 @@ body {
 .container {
   width: 100vw;
   height: 100vh;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 20% 60% 20%;
+  grid-template-areas: 
+  "header header header"
+  "left   main   right"
+  "footer footer footer";
+}
+
+.header_container,
+.footer_container,
+.left_container,
+.main_container,
+.right_container{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.header_container,
+.footer_container{
+  background-color: #5ed7ff;
+}
+
+.left_container,
+.right_container{
+  background-color: #dff3fd;
+}
+
+.header_container{
+  grid-area: header;
+}
+.left_container{
+  grid-area:left;
+}
+.main_container{
+  grid-area:main;
+}
+.right_container{
+  grid-area:right;
+}
+.footer_container{
+  grid-area: footer;
 }
