@@ -12,3 +12,6 @@
 ![css3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![javscript](https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)  
 ![React](https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+
+##2&3주차 Clock 구현하기 DOM 구조
+![dom](https://github.com/FX-STUDY/FE-STUDY/assets/102135238/0e17c4bb-3c8c-42e9-9211-299a1b4a066a)
