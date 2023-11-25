@@ -9,6 +9,67 @@
   <body>
     <div class="container">
       <!-- 해당 주석을 지우고 여기에 과제를 진행해 주세요! -->
+
+      <div class="container_wrap">
+        <div class="header">
+          <h1 class="clock_text">Clock</h1>
+          <!--배터리 파트-->
+        </div>
+      
+        <div class="main_container">
+          <!-- 왼쪽 파트 -->
+          <div class="left_main_container">
+            <!-- 현재 시각 -->
+            <div class="over_left_main_container">
+              <h1>현재 시각</h1>
+              <div class="left_box">
+                2023-11-24 24:10:00
+              </div>
+            </div>
+            
+            <!-- 알람 -->
+            <div class="under_left_main_container">
+              <h1>알람</h1>
+              <div class="left_box">
+                <!-- 수정 필요 -> 이친구는 한 박스 안에 있다는 느낌인디 -->
+                <input type="number" placeholder="    시(Hour)">
+                <input type="number" placeholder="    분(Minute)">
+                <input type="number" placeholder="    초(Second)">
+              </div>
+              <button>추가</button>
+            </div>
+          </div>
+
+          <!-- 오른쪽 파트 -->
+          <div class="right_main_container">
+            <h1>알람 현황</h1>
+            <div class="right_box">
+              <div class="time_box">
+                <div class="time">오전</div>
+                <div class="num_time">03:52:39</div>
+                <button id="button01">삭제</button>
+              </div>
+
+              <div class="time_box">
+                <div class="time">오후</div>
+                <div class="num_time">12:35:38</div>
+                <button id="button01">삭제</button>
+              </div>
+
+              <div class="time_box"
+              style="border: none">
+              <!-- 아래 상자만 테두리 효과 삭제 -->
+                <div class="time">오후</div>
+                <div class="num_time">18:21:35</div>
+                <button id="button01">삭제</button>
+              </div>
+            </div>
+            <button id="button02">전체 삭제</button>
+            <button id="button02">전원 끄기</button>
+          </div>
+        </div>
+      </div>
+
     </div>
   </body>
 </html>
