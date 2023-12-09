@@ -1,3 +1,8 @@
+/* 
+  공통 특징: class 태그
+  부분 특징: id 태그
+*/
+
 body {
   margin: 0;
 }
@@ -5,4 +10,59 @@ body {
 .container {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #5ed7ff;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContainer{
+  /*side, main 묶어서 설정*/
+  /* background-color: aquamarine; */
+  width: 100%;
+  height: 60%;
+  display: flex;
+}
+
+.left_side{
+  background-color: #dff3fd;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main{
+  background-color: white;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right_side{
+  background-color: #dff3fd;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  background-color: #5ed7ff;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
