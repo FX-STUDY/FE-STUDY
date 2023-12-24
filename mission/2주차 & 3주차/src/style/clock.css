@@ -1,11 +1,221 @@
 body {
-  margin: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0; padding: 0;
   background-color: #000;
 }
 
 .container {
   display: flex;
-
-  width: 100vw;
+  width: 90vw;
   height: 100vh;
+  background-color: black;
+  flex-direction: column;
+  /*overflow: auto;*/
+
+}
+
+.header{
+  width:85vw;
+  height:3vh;
+  margin:10px 20px 0px 20px;
+  padding:5px;
+  background-color: black;
+  color:#fff;
+  font-size:20px;
+  font-weight:bold;
+  align-items: center;  
+  border-width: 1px;
+
+}
+.header::after{
+  background: url(../assets/battery.png) no-repeat 0px 0px;  
+}
+.main-container{
+  width:85vw;
+  height:93vh; 
+  margin:5px 20px;
+  padding:5px;
+  background-color: black;
+  flex-direction:row;
+  display:flex;
+}
+
+.main{
+  display:flex;
+  flex-direction:column;
+  width:50vw;
+  height:90vh;
+  margin:2px;
+  background-color:black;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.article{
+  flex-direction: column;
+  width:37vw;
+  height:90vh;
+  margin:2px;
+  background-color:black;
+  margin-left: 20px;
+}
+.section1{
+  width:48vw;
+  height:50vh;
+  margin:2px;
+  background-color: black;
+  margin: 0 2px 2px 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.section2{
+  width:48vw;
+  height:40vh;
+  margin:2px;
+  background-color: black;
+  margin: 0 2px 2px 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ 
+}
+.section3{
+  width:35vw;
+  height:77vh;
+  margin:2px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+.section4{
+  width:35vw;
+  height:12vh;
+  margin:2px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.left-title-top{
+  width:47vw;
+  height:7vh;
+  margin:2px;
+  background-color:black;
+  color:#fff;
+}
+.left-title-bottom{
+  width:47vw;
+  height:7vh;
+  margin:2px;
+  background-color:black;
+  color:#fff;
+}
+.right-title{
+  width:34vw;
+  height:7vh;
+  margin:2px;
+  background-color:black;
+  color:#fff;
+}
+.mark{
+  width:47vw;
+  height:42vh;
+  margin:2px;
+  background-color:#2a2a2a;;
+  text-align: center;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  color:white;
+  border-radius: 20px;
+}
+.details{
+  width:47vw;
+  height:26vh;
+  margin:2px;
+  background-color:#2a2a2a;;
+  border-radius: 20px;
+
+}
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0 15px 5px;
+
+}
+.detail-item label {
+  margin-right: 10px;
+
+}
+
+#hour,#min,#sec{
+  width:34vw;
+  height:6vh;
+  margin:2px 15px 2px 0;
+  background-color:#2a2a2a;
+  
+  
+}
+
+.fig{
+  width:34vw;
+  height:69vh;
+  margin:1px;
+  background-color:#2a2a2a;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column;
+
+}
+.figcaption{
+  width:33vw;
+  height:22vh;
+  margin:1px;
+  background-color:#2a2a2a;
+  display: flex;
+  justify-content: center; 
+  flex-direction: column;
+  font-size:30px;
+  color:#efefef;
+  
+}
+.time{
+
+}
+
+.button1{
+  width:47vw;
+  height:5vh;
+  margin:2px;
+  background-color:#2a2a2a;
+  color:#f69906;
+  font-size: 19px;
+  font-weight :500px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  border-radius: 15px;
+}
+.button2,.button3{
+  width:34vw;
+  height:6vh;
+  margin:2px;
+  background-color:#2a2a2a;
+  color:#f69906;
+  font-size: 19px;
+  font-weight :500px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  border-radius: 15px;
 }
