@@ -3,9 +3,345 @@ body {
   background-color: #000;
 }
 
+/* body 전체 컨테이너 속성 값*/ 
 .container {
-  display: flex;
-
   width: 100vw;
   height: 100vh;
+
+  display: flex;     
+  flex-direction: column;   /*아이템 요소 방향 세로(수직정렬)*/
+  align-items: center;   
+  font-family: 'Do Hyeon', sans-serif;   /*구글 폰트 적용*/
 }
+
+.header {
+  display: flex;
+
+  width: 90%;
+  height: 5%;
+  flex-direction: row;    /*header 아이템 요소들 가로(수평) 정렬*/
+  justify-content: space-between;  /*아이템 사이에 균일한 간격 조정*/
+  align-items: center;
+  position: relative;     /*가상 선택자 after에 대한 부모 클래스 지정*/ 
+}
+
+.logo {
+  display: flex;
+  color : #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.charge{
+  display: flex;
+  color : #fff;
+  font-size: 16px;
+  align-items: center;
+}
+
+/*가상 선택자 사용*/
+.charge::after {
+  width: 25px;
+  height: 25px;
+  margin: 0px 10px;         /* 상하: 0, 좌우: 10px*/
+
+  content: " ";              /* after 요소의 내용을 비움 */
+  display: inline-block;    /* after 요소를 inline-block 요소로 설정 */
+  background-image: url("../../assets/battery.png");
+  background-size: cover;   /* background-image 크기를 요소에 맞게 조정 */
+  
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/* main All Container*/
+.mainContainer {
+  width: 90%;
+  height: 95%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* 구분선 가상 선택자(header/main 구분) */
+.mainContainer::after {
+  width: 100%;
+  height: 1px;  /*구분선 굵기*/
+
+  content: " ";    
+  position: absolute;
+  top: 0;    /*mainContainer 클래스 위에 배치*/
+  left: 0;
+  background-color: #4a4a4a;
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/* 현재 시각 + 알람(input) left part*/
+.leftContent {
+  width: 55%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  margin-top: 3vh;
+  margin-right: 3vh;
+}
+
+/* 현재 시각 */
+.sectionA{
+  width: 100%;
+  height: 40%;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+/* 현재 시각 (h1 텍스트) */
+.nowTime{
+  width: 100%;
+  height: 15%;
+  margin: 0;
+  margin-bottom: 2vh;
+
+  display: flex;
+  align-items: flex-end;   /*아이템 요소가 bottom에 붙게 배치*/ 
+  color: #fff;
+}
+
+/* 현재 시각 (숫자) */
+.nowDate{
+  width: 100%;
+  height: 85vh;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #2a2a2a;
+  border-radius: 15px;
+  color: #efefef;
+  font-size: 45px;
+  font-weight: 500;  
+}
+
+/* 알람 예약 : input */
+.sectionB{
+  width: 100%;
+  height: 55%;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+/* 알람 h1 텍스트 */
+.alarm {
+  width: 100%;
+  height: 16%;
+  margin: 0;
+  margin-bottom: 1vh;
+
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+}
+
+/* input 3개가 배치될 부모 컨테이너 */
+.inputAlarm {
+  width: 100%;
+  height: 70%;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #2a2a2a;
+  border-radius: 15px;
+  color: #efefef;
+  font-size: 16px;
+}
+
+.inputAlarm input {
+  width: 95%;
+  height: 32%;   /* input 요소 각 너비를 3으로 나눔*/
+
+  display: flex;
+  flex:1;          /* 아이템들의 너비가 전체 너비에 1:1:1로 자동 맞춤*/
+  justify-content: flex-start;    /*아이템 요소 왼쪽 정렬*/
+  align-items: center;
+
+  background-color: transparent;   /* input background 배경 삭제*/
+  border: none;                    /* input 테두리 삭제 */
+  font-size: 16px;
+}
+
+/* 알람 간에 구분선 hr 태그 사용*/
+.inputAlarm hr {
+  width: 95%;
+  height: 1px;
+  background-color: #4a4a4a;
+  border: none;
+  margin: 3px 0;
+}
+
+/* 추가 버튼 속성*/
+.add {
+  width: 100%;
+  height: 12%;
+  margin: 0;
+  margin-top: 2vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #2a2a2a;
+  border-radius: 10px;
+
+  color: #f69906;
+  font-size: 19px;
+  font-weight: 500;
+
+}
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/* 알람 현황 + 버튼 2개 right part */
+.rightContent {
+  width: 45%;
+  height: 100%;
+  margin-top: 3vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* 알람 현황 */
+.articleA{
+  width: 100%;
+  height: 80%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* 알람 현황 (h1 텍스트)*/
+.currentAlarm {
+  width: 100%;
+  height: 7%;
+  margin: 0;
+  margin-bottom: 2vh;
+
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+}
+
+/* Alarm box */
+.setAlarm {
+  width: 100%;
+  height: 80vh;
+
+  display: flex;
+  flex-direction: column;
+  
+  background-color: #2a2a2a;
+  border-radius: 15px;
+}
+
+/* ------------------------ 수정 -------------------------*/
+.alarm1 {
+  width: 95%;
+  height: auto;
+  margin: auto;
+
+  display: flex;
+  flex:1;
+  align-items: center;
+  position: relative; 
+}
+
+.alarm1::after {
+  width: 100%;
+  height: 1px;
+
+  content: " ";    
+  position: absolute;
+  top: 0;       /*alarm2 클래스 위에 생성*/
+  left: 0;
+  background-color: #4a4a4a;
+}
+
+/* 오전/오후 텍스트에 대한 클래스 */
+.formatDateTime {
+  width: 9%;
+  margin: 0;
+  display: flex;
+  padding-top: 8px;
+
+  color: #efefef;
+  font-size: 30px;
+}
+
+/* 예약한 시간에 대한 클래스 */
+.setTime{
+  width: 50%;
+  margin: 0;
+  display: flex;
+  align-items: flex-end;
+
+  color: #efefef;  
+  font-size: 50px;
+}
+
+/*삭제 버튼 영역 컨테이너*/
+.deleteButton {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;   /*아이템 요소 오른쪽 정렬*/
+}
+
+/* 삭제 버튼*/
+.delete {
+  width: 22%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #535353;
+  border-radius: 15px;
+  font-size: 16px;
+  color: #f69906;
+}
+
+/* 전체 삭제 + 전원 끄기 부모 */
+.articleB{
+  width: 100%;
+  height: 20%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* 전체 삭제 + 전원 끄기*/
+.allDelete, .shutdown {
+  width: 100%;
+  height: 30%;
+  margin-top: 1.5vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  font-size: 19px;
+  font-weight: 500;
+  color: #f69906;
+}
+

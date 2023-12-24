@@ -1,14 +1,86 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clock</title>
-    <link rel="stylesheet" href="../style/clock.css" />
-  </head>
-  <body>
-    <div class="container">
-      <!-- 해당 주석을 지우고 여기에 과제를 진행해 주세요! -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clock</title>
+  <link rel="stylesheet" href="../style/clock.css" />
+
+  <!-- 구글 무료 폰트 링크-->
+  <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&family=Rubik&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container">
+    <!-- header -->
+    <div class="header">
+      <p class="logo"> Clock </p>
+      <p class="charge">  </p> <!-- 남은 배터리 %-->
     </div>
-  </body>
+
+    <!-- main container 본문 -->
+    <div class="mainContainer">
+
+      <!-- 현재 시각 + 알람(input)-->
+      <div class="leftContent">
+        <!-- 현재 시각-->
+        <div class="sectionA">
+          <h1 class="nowTime"> 현재 시각</h1>
+          <div class="nowDate"><p id="nowDateText">2023-11-23 20:43:37</p></div>
+        </div>
+
+        <!-- 알람 예약 : input-->
+        <div class="sectionB">
+          <h1 class="alarm"> 알람</h1>
+          <div class="inputAlarm">
+            <input type="text" placeholder="시 (Hour)" style="color:white">
+            <hr>
+            <input type="text" placeholder="분 (Minute)"style="color:white">
+            <hr>
+            <input type="text" placeholder="초 (Second)"style="color:white">
+          </div>
+          <div class="add">추가</div>
+        </div>
+      </div>
+
+      <!--알람 현황 + 버튼 2개-->
+      <div class="rightContent">
+        <!-- 알람 현황 -->
+        <div class="articleA">
+          <h1 class="currentAlarm"> 알람 현황</h1>
+          <div class="setAlarm">
+            <div class="alarm1">
+              <p class="formatDateTime"> 오전 </p>
+              <p class="setTime">03:52:39</p>
+              <div class="deleteButton"><p class="delete">삭제</p></div>
+            </div>
+            <div class="alarm1">
+              <p class="formatDateTime"> 오후 </p>
+              <p class="setTime">12:35:38</p>
+              <div class="deleteButton"><p class="delete">삭제</p></div>
+            </div>
+            <div class="alarm1">
+              <p class="formatDateTime"> 오후 </p>
+              <p class="setTime">18:21:35</p>
+              <div class="deleteButton"><p class="delete">삭제</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 전체 삭제 + 전원 끄기 -->
+        <div class="articleB">
+          <div class="allDelete"> 전체 삭제 </div>
+          <div class="shutdown"> 전원 끄기</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <script src="../js/clock.js"></script>
+</body>
+
 </html>
