@@ -1,14 +1,69 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clock</title>
-    <link rel="stylesheet" href="../style/clock.css" />
-  </head>
-  <body>
-    <div class="container">
-      <!-- 해당 주석을 지우고 여기에 과제를 진행해 주세요! -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clock</title>
+  <link rel="stylesheet" href="../style/clock.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">Clock</div>
+    <div class="main-container">
+      <div class="main">
+        <div class="section1">
+         
+          <div class="left-title-top"><h1>현재시각</h1></div>
+          <div class="mark"><h1>2023-12-06 11:30:32</h1></div>
+        </div>
+        <div class="section2">
+          <div class="left-title-bottom"><h1>알람</h1></div>
+          <div class="details">
+            <div class="detail-item">
+              <label for="hour">시 (Hour)</label>
+              <input type="text" id="hour" placeholder="시를 입력해주세요.">
+            </div>
+            <div class="detail-item">
+              <label for="min">분 (Minute)</label>
+              <input type="text" id="min" placeholder="분을 입력해주세요.">
+            </div>
+            <div class="detail-item">
+              <label for="sec">초 (Second)</label>
+              <input type="text" id="sec" placeholder="초를 입력해주세요.">
+            </div>
+            <button>설정</button>
+          </div>
+          <div class="button1">추가</div>
+        </div>
+      </div>
+      <div class="article">
+        <div class="section3">
+          <div class="right-title"><h1>알람 현황</h1></div>
+          <div class="fig">
+            <div class="figcaption">
+              오전 03:15:39
+              <div class="time"></div>
+            </div>
+            <div class="figcaption">
+              오전 09:35:52
+              <div class="time"></div>
+            </div>
+            <div class="figcaption">
+              오후 20:58:21
+              <div class="time"></div>
+            </div>
+          </div>
+        </div>
+        <div class="section4">
+          <div class="button2">전체 삭제</div>
+          <div class="button3">전원 끄기</div>
+        </div>
+      </div>
     </div>
-  </body>
+
+  </div>
+</body>
+
 </html>
