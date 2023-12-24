@@ -17,7 +17,7 @@
     <!-- header -->
     <div class="header">
       <p class="logo"> Clock </p>
-      <p class="charge"> 90% </p> <!-- 남은 배터리 %-->
+      <p class="charge">  </p> <!-- 남은 배터리 %-->
     </div>
 
     <!-- main container 본문 -->
@@ -28,18 +28,18 @@
         <!-- 현재 시각-->
         <div class="sectionA">
           <h1 class="nowTime"> 현재 시각</h1>
-          <p class="nowDate"> 2023-11-23 20:43:37 </p>
+          <div class="nowDate"><p id="nowDateText">2023-11-23 20:43:37</p></div>
         </div>
 
         <!-- 알람 예약 : input-->
         <div class="sectionB">
           <h1 class="alarm"> 알람</h1>
           <div class="inputAlarm">
-            <input type="text" placeholder="시 (Hour)">
+            <input type="text" placeholder="시 (Hour)" style="color:white">
             <hr>
-            <input type="text" placeholder="분 (Minute)">
+            <input type="text" placeholder="분 (Minute)"style="color:white">
             <hr>
-            <input type="text" placeholder="초 (Second)">
+            <input type="text" placeholder="초 (Second)"style="color:white">
           </div>
           <div class="add">추가</div>
         </div>
@@ -56,12 +56,12 @@
               <p class="setTime">03:52:39</p>
               <div class="deleteButton"><p class="delete">삭제</p></div>
             </div>
-            <div class="alarm2">
+            <div class="alarm1">
               <p class="formatDateTime"> 오후 </p>
               <p class="setTime">12:35:38</p>
               <div class="deleteButton"><p class="delete">삭제</p></div>
             </div>
-            <div class="alarm3">
+            <div class="alarm1">
               <p class="formatDateTime"> 오후 </p>
               <p class="setTime">18:21:35</p>
               <div class="deleteButton"><p class="delete">삭제</p></div>
@@ -80,6 +80,7 @@
     </div>
 
   </div>
+  <script src="../js/clock.js"></script>
 </body>
 
 </html>

@@ -114,7 +114,7 @@ body {
 /* 현재 시각 (숫자) */
 .nowDate{
   width: 100%;
-  height: 85%;
+  height: 85vh;
   margin: 0;
 
   display: flex;
@@ -140,7 +140,7 @@ body {
 /* 알람 h1 텍스트 */
 .alarm {
   width: 100%;
-  height: 13%;
+  height: 16%;
   margin: 0;
   margin-bottom: 1vh;
 
@@ -244,7 +244,7 @@ body {
 /* Alarm box */
 .setAlarm {
   width: 100%;
-  height: 88%;
+  height: 80vh;
 
   display: flex;
   flex-direction: column;
@@ -253,7 +253,8 @@ body {
   border-radius: 15px;
 }
 
-.alarm1, .alarm2, .alarm3 {
+/* ------------------------ 수정 -------------------------*/
+.alarm1 {
   width: 95%;
   height: auto;
   margin: auto;
@@ -261,34 +262,16 @@ body {
   display: flex;
   flex:1;
   align-items: center;
+  position: relative; 
 }
 
-.alarm2 {
-  position: relative;    /*after 구분선 부모 선언*/
-}
-
-.alarm2::after {
+.alarm1::after {
   width: 100%;
   height: 1px;
 
   content: " ";    
   position: absolute;
   top: 0;       /*alarm2 클래스 위에 생성*/
-  left: 0;
-  background-color: #4a4a4a;
-}
-
-.alarm3 {
-  position: relative;
-}
-
-.alarm3::after {
-  width: 100%;
-  height: 1px;
-
-  content: " ";    
-  position: absolute;
-  top: 0;       /*alarm3 클래스 위에 생성*/
   left: 0;
   background-color: #4a4a4a;
 }
@@ -348,8 +331,8 @@ body {
 /* 전체 삭제 + 전원 끄기*/
 .allDelete, .shutdown {
   width: 100%;
-  height: 34%;
-  margin-bottom: 1.5vh;
+  height: 30%;
+  margin-top: 1.5vh;
 
   display: flex;
   justify-content: center;
