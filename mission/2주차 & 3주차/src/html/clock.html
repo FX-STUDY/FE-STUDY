@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <link rel="stylesheet" href="../styles/clock.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <span class="title">Clock</span>
+        <span class="battery-text"></span>
+      </header>
+      <main class="main-container">
+        <div class="left-container">
+          <div class="clock-container">
+            <h1 class="content-title">현재 시각</h1>
+            <div class="clock">
+              <span class="current-time"></span>
+            </div>
+          </div>
+          <div class="alarm-container">
+            <h1 class="content-title">알람</h1>
+            <form class="input-time">
+              <input type="text" id="hour" placeholder="시 (Hour)" class="add-alarm" />
+              <input type="text" id="minute" placeholder="분 (Minute)" class="add-alarm" />
+              <input type="text" id="second" placeholder="초 (Second)" class="add-alarm" />
+            </form>
+            <button class="add-button">추가</button>
+          </div>
+        </div>
+        <div class="right-container">
+          <h1 class="content-title">알람 현황</h1>
+          <div class="alarm-list-container">
+            <div class="alarm-list"></div>
+          </div>
+          <button class="all-delete-button">전체 삭제</button>
+          <button class="power-off-button">전원 끄기</button>
+        </div>
+      </main>
+    </div>
+    <script src="../scripts/clock.js"></script>
+  </body>
+</html>

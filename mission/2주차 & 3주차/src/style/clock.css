@@ -1,0 +1,253 @@
+body {
+  margin: 0;
+  background-color: #000;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100vh;
+
+  max-width: 1360px;
+  min-width: 1080px;
+}
+
+.header {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 90%;
+  height: 3%;
+
+  padding: 15px;
+}
+
+.title,
+.battery-text,
+.content-title {
+  color: #fff;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.battery-text {
+  display: flex;
+  padding: 3px;
+}
+
+.battery-text::after {
+  content: '';
+  display: block;
+  position: relative;
+
+  background-image: url('../assets/battery.png');
+  background-size: 25px;
+  background-repeat: no-repeat;
+
+  margin-top: -4px;
+  margin-left: 5px;
+
+  width: 25px;
+  height: 25px;
+}
+
+.header::after {
+  content: '';
+  display: block;
+  position: absolute;
+
+  top: 100%;
+
+  border-bottom: 1px solid #4a4a4a;
+
+  width: 97%;
+  height: 1px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 10px;
+
+  width: 90%;
+  height: 93%;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+
+  width: 60%;
+  height: 100%;
+}
+
+.clock-container,
+.alarm-container,
+.list-container {
+  width: 100%;
+}
+
+.clock-container {
+  height: 45%;
+}
+
+.clock,
+.input-time,
+.alarm-list-container {
+  width: 95%;
+  margin-top: -12px;
+
+  background-color: #2a2a2a;
+  border-radius: 15px;
+}
+
+.clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 78%;
+}
+
+.current-time {
+  font-size: 45px;
+  font-weight: 500;
+  color: #efefef;
+
+  letter-spacing: -1px;
+}
+
+.alarm-container {
+  display: flex;
+  flex-direction: column;
+
+  height: 55%;
+  margin-top: 10px;
+}
+
+.input-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 55%;
+  box-sizing: border-box;
+}
+
+.add-alarm {
+  width: 95%;
+  height: 33%;
+
+  border: none;
+  border-bottom: 0.5px solid #535353;
+
+  font-size: 16px;
+  font-weight: 500;
+  color: #efefef;
+
+  outline: none;
+  background: none;
+}
+
+.add-alarm:last-child {
+  border: none;
+}
+
+.add-button,
+.all-delete-button,
+.power-off-button {
+  width: 95%;
+  margin-top: 12px;
+
+  background-color: #2a2a2a;
+  border-radius: 14px;
+  border: none;
+
+  color: #f69906;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.add-button {
+  height: 54px;
+}
+
+.right-container {
+  width: 40%;
+  height: 100%;
+}
+
+.alarm-list-container {
+  display: flex;
+  flex-direction: column;
+
+  height: 66%;
+  margin-top: -13px;
+}
+
+.alarm-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100%;
+}
+
+.alarm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 95%;
+  height: 33%;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+.alarm:last-child {
+  border: none;
+}
+
+.alarm-text {
+  display: flex;
+  margin: 18px 0 0 2px;
+  color: #efefef;
+}
+
+.alarm-noon {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  padding-left: 4px;
+  margin-top: 6px;
+}
+
+.alarm-time {
+  font-size: 50px;
+  margin-left: 5px;
+}
+
+.delete-button {
+  width: 55px;
+  height: 30px;
+  margin: 12px 10px 0 0;
+  border: none;
+  border-radius: 15px;
+  background-color: #535353;
+  font-size: 16px;
+  color: #f69906;
+}
+
+.all-delete-button,
+.power-off-button {
+  height: 55px;
+  margin-top: 11px;
+}
